@@ -24,6 +24,11 @@ for i in range(5000):
     actions.perform()
     count = int(cookie_count.text.split(" ")[0])
     print(count)
-    # for item in items:
-        # value = int(item.text)
+    for item in items:
+        value = int(item.text)
+        if value <= count:
+            upgrade_actions = ActionChains(driver)
+            upgrade_actions.move_to_element(item)
+            upgrade_actions.click()
+            upgrade_actions.perform()
     
