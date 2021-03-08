@@ -1,3 +1,5 @@
 chromedriver
 .venv
 .vscode/
+__pycache__
+geckodriver.log
